@@ -1,4 +1,4 @@
-# ReadBooksOf_2018
+# BooksToRead2018
 - [ ] go web 编程
 - [ ] go in action
 - [ ] go 并发实战
