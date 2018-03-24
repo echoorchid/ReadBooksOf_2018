@@ -5,20 +5,32 @@
     "tasks": [
         {
             "label": "build",
-            "type": "shell",
-            "command": "msbuild",
+            "command": "make",
             "args": [
-                // Ask msbuild to generate full paths for file names.
-                "/property:GenerateFullPaths=true",
-                "/t:build"
+                "default"
             ],
-            "group": "build",
-            "presentation": {
-                // Reveal the output only if unrecognized errors occur.
-                "reveal": "silent"
-            },
-            // Use the standard MS compiler pattern to detect errors, warnings and infos
-            "problemMatcher": "$msCompile"
+            "type": "shell",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "build-debug",
+            "command": "make",
+            "args": [
+                "debug"
+            ],
+            "type": "shell",
+            "problemMatcher": []
+        },
+        {
+            "label": "clean",
+            "command": "make",
+            "args": [
+                "clean"
+            ],
+            "type": "shell",
+            "problemMatcher": []
         }
     ]
 }
