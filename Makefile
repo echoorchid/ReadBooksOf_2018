@@ -37,9 +37,13 @@ default: all
 
 # non-phony targets
 $(TARGET): $(OBJ)
+	mkdir -p ./$(OBJ_PATH)
+	mkdir -p ./$(BIN_PATH)
+	mkdir -p ./$(DBG_PATH)
 	$(CC) $(CCFLAG) -o $@ $?
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c*
+	mkdir -p ./$(OBJ_PATH)
 	$(CC) $(CCOBJFLAG) -o $@ $<
 
 $(DBG_PATH)/%.o: $(SRC_PATH)/%.c*
