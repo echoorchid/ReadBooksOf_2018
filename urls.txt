@@ -1,0 +1,1 @@
+http://linuxplayer.org/2010/04/一种传递http认证信息的方式
